@@ -4,22 +4,118 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+    <!--android:weightSum="6"
+    6 = weight của view-->
+
     <!-- font size dùng sp
        view size nên dùng dp-->
 
+    <!--   android:paddingTop="100dp" chỉnh kich thước phía trong
+            ................
+           layout_weight lấy giá trị theo phần từ Layout cha, 2 view chia đều dặt cùng giá trị
+           orientation horizonal có weight sum thì edit layout_width về 0dp"
+                       vertical                                 height về 0dp
+           .............
+           layout_gravity chỉnh ngược lại với orientation
+           horizontal -> top center bottom
+           vertical -> left center right -->
 
-    <TextView
-        android:paddingTop="100dp"
+    <!--Ctl + Alt + L : format code-->
 
-        android:layout_marginLeft="19dp"
-        android:layout_marginTop="50dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="AAA"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="#4D4949"
+            android:background="#FF2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#2279A2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#850F7F" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FC539C" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#3AC97A" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FF2" />
+
+    </LinearLayout>
+
+
+    <!--<TextView
+        android:layout_gravity="center|left"
+        android:background="#8CF55F"
         android:textColor="#FF2200"
         android:textSize="30sp"
-        android:text="@string/app_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+        android:text="Linear 1"
+        android:layout_width="200sp"
+        android:layout_height="200sp"-->
+    />
+    <!-- <TextView
+         android:background="#8CF55F"
+         android:layout_weight="1"
+         android:textColor="#FF2200"
+         android:textSize="30sp"
+         android:text="Linear 1"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         />
+     <TextView
+         android:background="#aa0"
+         android:layout_weight="2"
+         android:textColor="#FF2200"
+         android:textSize="30sp"
+         android:text="Linear 2"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         />
+     <TextView
+         android:background="#FF2"
+         android:layout_weight="3"
+         android:textColor="#FF2200"
+         android:textSize="30sp"
+         android:text="Linear 3"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         />-->
 
 </LinearLayout>
